@@ -58,7 +58,7 @@ public interface EmployeeDao {
         @Override
         @Transactional
         public Employee addEmployee(Employee employee) {
-            final String INSERT_EMPLOYEE = "INSERT INTO employee(firstName, lastame) " 
+            final String INSERT_EMPLOYEE = "INSERT INTO employee(firstName, lastName) " 
                     + "VALUES(?,?)";
             jdbc.update(INSERT_EMPLOYEE,
                     employee.getFirstName(),
